@@ -1,5 +1,6 @@
 module "eks_cluster_001" {
   source          = "git::git@github.com:cxagroup/infra-terraform-base//eks-clusters"
+  source          = "git@github.com:phu-mai/hcl-abstraction-eks-clusters.git"
   env_name        = var.env_name
   cluster_version = var.cluster_version
   vpc_id          = var.vpc_id
