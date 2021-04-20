@@ -1,0 +1,48 @@
+
+version: 3
+automerge: true
+projects:
+
+- name: aws/dev-account/environments/dev/shared/ap-southeast-1/networks/tgw
+  dir: aws/dev-account/environments/dev/shared/ap-southeast-1/networks/tgw
+  workspace: default
+  terraform_version: v0.13.5
+  apply_requirements: [mergeable, approved]
+  autoplan:
+    enabled: true
+    when_modified:
+    - '*.hcl'
+    - '*.tf*'
+
+- name: aws/dev-account/environments/dev/shared/ap-southeast-1/networks/vpc
+  dir: aws/dev-account/environments/dev/shared/ap-southeast-1/networks/vpc
+  workspace: default
+  terraform_version: v0.13.5
+  apply_requirements: [mergeable, approved]
+  autoplan:
+    enabled: true
+    when_modified:
+    - '*.hcl'
+    - '*.tf*'
+
+- name: aws/dev-account/environments/dev/shared/ap-southeast-1/services/eks-clusters
+  dir: aws/dev-account/environments/dev/shared/ap-southeast-1/services/eks-clusters
+  workspace: default
+  terraform_version: v0.13.5
+  apply_requirements: [mergeable, approved]
+  autoplan:
+    enabled: true
+    when_modified:
+    - '*.hcl'
+    - '*.tf*'
+
+- name: aws/dev-account/environments/dev/shared/ap-southeast-1/services/secgroup
+  dir: aws/dev-account/environments/dev/shared/ap-southeast-1/services/secgroup
+  workspace: default
+  terraform_version: v0.13.5
+  apply_requirements: [mergeable, approved]
+  autoplan:
+    enabled: true
+    when_modified:
+    - '*.hcl'
+    - '*.tf*'
